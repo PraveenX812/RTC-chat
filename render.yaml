@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: anon-chat-backend
+    env: node
+    plan: free
+    root: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: anon-chat-db
+          property: connectionString
+
+databases:
+  - name: anon-chat-db
+    plan: free
+    databaseName: chatapp
+    user: admin

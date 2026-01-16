@@ -17,8 +17,12 @@ const io = new Server(httpServer, {
 
 socketHandler(io);
 
-httpServer.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+const initDb = require('./config/initDb');
+
+initDb().then(() => {
+    httpServer.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
 });
 
 const shutdown = () => {
