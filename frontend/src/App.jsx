@@ -67,7 +67,7 @@ function App() {
       <div className="w-full max-w-2xl h-[600px] flex flex-col bg-[#111] border border-[#222] rounded-xl shadow-2xl overflow-hidden font-mono">
         <div className="h-14 border-b border-[#222] flex items-center justify-between px-6 bg-[#161616]">
           <h1 className="text-lg font-semibold tracking-wider text-gray-200">
-            ANON_CHAT v1.0
+            ChatApp
           </h1>
           <div className="flex items-center gap-3 text-xs text-gray-500">
             <span>STATUS: {status === 'CONNECTED' ? 'SECURE_LINK' : 'IDLE'}</span>
