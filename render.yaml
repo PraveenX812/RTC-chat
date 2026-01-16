@@ -3,7 +3,7 @@ services:
     name: anon-chat-backend
     env: node
     plan: free
-    root: backend
+    rootDir: backend
     buildCommand: npm install
     startCommand: npm start
     envVars:
